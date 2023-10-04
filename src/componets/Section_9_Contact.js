@@ -48,7 +48,8 @@ const SectionContact = () => {
       }
   }
   useEffect(()=>{
-    sendMessage();
+    if(message)
+      sendMessage();
   },[message]);
   useEffect(()=>{
     initialChange(2);
