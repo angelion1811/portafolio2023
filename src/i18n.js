@@ -9,8 +9,11 @@ i18n
   .use(initReactI18next) // passes i18n down to react-i18next
   .init({
     fallbackLng,// use en if detected lng is not available
-    saveMissing: true 
+    saveMissing: true ,
     // send not translated keys to endpoint
+    interpolation: {
+      escapeValue: false,
+    },
     
   });
 
