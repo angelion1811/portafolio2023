@@ -31,7 +31,6 @@ const PercentBar = ({title, percent}) => {
 }
 const SectionResume = () =>{
   const {t, i18n} = useTranslation("Section4Resume");
-  console.log('i18n', i18n)
   const {started, animatedClass, startAnimation, initialChange} = useStarted();
   const styledObject = (index) => {
       switch (index){
