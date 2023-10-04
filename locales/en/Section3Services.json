@@ -1,0 +1,14 @@
+{
+    "WhatIDo": "What I Do?",
+    "HowICanHelp": " How I can help your next project",
+    "title1": "Web Design",
+    "title2": "Web Development",
+    "title3": "App Design & Develop",
+    "title4": "Testing QA",
+    "title5": "Business Analysis",
+    "paragraph1": "I can make the web design you want and I can use the various libraries that currently exist to give it the desired animations",
+    "paragraph2": "Based on my experience and knowledge, I have the ability to create various applications in various environments and use various frameworks that help the development of applications both in the front-end and in the backend",
+    "paragraph3": "I not only have experience in web environments but also knowledge of making mobile applications using hybrid frameworks such as react-native or flutter.",
+    "paragraph4": "In addition, my experience has given me the ability to analyze various failures or erroneous situations to which I can give corrections, in addition to the fact that I have used tools such as postman to test APIS and I have had a little practice with cypress to Web.",
+    "paragraph5": "Based on my experience I can give you suggestions and tell you what the minimum requirements will be to start your next project."
+}
