@@ -24,9 +24,27 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" type="text/css">
+
+      <!-- Stylesheet
+      ============================== -->
+      <!-- Animate -->
+      <link rel="stylesheet" type="text/css" href="vendor/animate/animate.min.css">
+      <!-- Bootstrap -->
+      <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.rtl.min.css">
+      <!-- Font Awesome Icon -->
+      <link rel="stylesheet" type="text/css" href="vendor/font-awesome/css/all.min.css">
+      <!-- Owl Carousel -->
+      <link rel="stylesheet" type="text/css" href="vendor/owl.carousel/assets/owl.carousel.min.css">
+      <!-- Magnific Popup -->
+      <link rel="stylesheet" type="text/css" href="vendor/magnific-popup/magnific-popup.min.css">
+      <!-- Custom Stylesheet -->
+      <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+      <!-- Colors Css -->
+      <link id="color-switcher" type="text/css" rel="stylesheet" href="#">
     <title>React App</title>
   </head>
-  <body>
+  <body class="rtl" data-bs-spy="scroll" data-bs-target=".navbar">
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--
@@ -39,5 +57,37 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/jquery.easing/jquery.easing.min.js"></script>
+    <script src="vendor/jquery.appear/jquery.appear.min.js"></script>
+    <script src="vendor/wow/wow.min.js"></script>
+    <script src="vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="vendor/typed/typed.min.js"></script>
+    <script src="vendor/parallaxie/parallaxie.min.js"></script>
+    <script src="vendor/owl.carousel/owl.carousel.min.js"></script>
+    <script src="vendor/isotope/isotope.pkgd.min.js"></script>
+    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="js/switcher.min.js"></script>
+    <script src="js/theme.js"></script>
+    <style type="text/css" data-typed-js-css="true">
+      .typed-cursor{
+        opacity: 1;
+      }
+      .typed-cursor.typed-cursor--blink{
+        animation: typedjsBlink 0.7s infinite;
+        -webkit-animation: typedjsBlink 0.7s infinite;
+                animation: typedjsBlink 0.7s infinite;
+      }
+      @keyframes typedjsBlink{
+        50% { opacity: 0.0; }
+      }
+      @-webkit-keyframes typedjsBlink{
+        0% { opacity: 1; }
+        50% { opacity: 0.0; }
+        100% { opacity: 1; }
+      }
+    </style>
+
   </body>
-</html>
+  </html>
