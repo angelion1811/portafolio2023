@@ -2,6 +2,8 @@
 import { useEffect } from "react";
 import useStarted from "../hooks/useStarted";
 import { useTranslation } from "react-i18next";
+import CV_EN from "../assets/files/pdf/CV_EN.pdf"
+import CV_ES from "../assets/files/pdf/CV_ES.pdf"
 const DescriptionRow =  ({title, subTitle, paragraph}) => {
   return(<>
           <h3 className="text-5">{title}</h3>
@@ -28,8 +30,8 @@ const PercentBar = ({title, percent}) => {
   </>)
 }
 const SectionResume = () =>{
-  const {t} = useTranslation("Section4Resume");
-
+  const {t, i18n} = useTranslation("Section4Resume");
+  console.log('i18n', i18n)
   const {started, animatedClass, startAnimation, initialChange} = useStarted();
   const styledObject = (index) => {
       switch (index){
@@ -42,6 +44,9 @@ const SectionResume = () =>{
           return {};
       }
   }
+  
+  const getFile = () => i18n.language == "es-US"? CV_ES:CV_EN;
+
   useEffect(()=>{
     initialChange(4);
   },[])
@@ -159,7 +164,7 @@ const SectionResume = () =>{
         </div>
         <div className="row" onMouseEnter={()=>startAnimation(3)} >
           <p className={`text-center mt-5 wow fadeInUp ${animatedClass[3]}`} style={styledObject(3)} >
-            <a href="#" className="btn btn-outline-dark shadow-none rounded-0">{t(`DownloadCV`)}</a>
+            <a href={getFile()} className="btn btn-outline-dark shadow-none rounded-0" download={`CV-${i18n.language}-Angel-Leon.pdf`}>{t(`DownloadCV`)}</a>
           </p>
         </div>
        

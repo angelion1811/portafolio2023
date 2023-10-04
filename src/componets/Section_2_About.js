@@ -33,13 +33,10 @@ return(<>
         
         <div className="row" onMouseEnter={()=>startAnimation(1)}>
           <div className={`col-lg-8 text-center text-lg-start wow fadeInUp ${animatedClass[1]}`} style={{"visibility": started[1]?"visible":"hidden", "animationName": started[1]? undefined:"none"}}>
-            <h2 className="text-8 fw-400 mb-3">{t(`Hi`)}<span className="fw-700 border-bottom border-3 border-primary">Angel León</span>
+            <h2 className="text-8 fw-400 mb-3">{t(`Hi`)}<span className="fw-700 border-bottom border-3 border-primary m-2">Angel León</span>
             </h2>
             <p className="text-5">
-              I'm a designer &amp; developer with a passion for web design. 
-              I enjoy developing simple, clean and slick websites that provide real value to the end user. 
-              Thousands of clients have procured exceptional results while working with me.
-               Delivering work within time and budget which meets client’s requirements is our moto.
+              {t("paragraph")}
             </p>
           </div>
           <div className={`col-lg-4 mt-4 mt-lg-0 wow fadeInUp ${animatedClass[1]}`} data-wow-delay="0.2s" style={{"visibility": started[1]?"visible":"hidden", "animation-delay": "0.2s", "animationName": started[1]? undefined:"none"}}>

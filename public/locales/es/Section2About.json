@@ -2,7 +2,8 @@
 
     "AboutMe": "Acerca de mí",
     "KnowMeMore": "Conoceme Más",
-    "Hi": "Hola, Soy", 
+    "Hi": "Hola, Soy ", 
+    "paragraph":"Comencé en esta profesión de manera oficial a partir del 2017 y trabajado en diferentes áreas que conlleva un desarrollo web. Mi primer empleo estuve como Backend Developer. En lo personal prefiero trabajar mas en el backend que en el front-end, sin embargo eso no implica que no pueda cumplir ese rol.",
     "Name": "Nombre:",
     "Email": "Correo Electrónico:",
     "DateOfBirth": "Fecha de nacimiento:",

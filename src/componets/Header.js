@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { useTranslation } from "react-i18next"
 const NavBarItem = ({name, hrefName, action}) => {
     return(<>
         <li className="nav-item">
@@ -18,9 +19,14 @@ const SocialLink = ({social, iconClass, hrefName, }) => {
 }
 
 const Header = ()=>{
+    const [cLanguage, setCLanguage] = useState("es");
+    const {t, i18n} = useTranslation("Header");
     const [showColapse, setShowColapse] = useState(false);
     const closeCollapse = () => setShowColapse(false);
-    
+    const changeLanguage = () =>{
+      cLanguage == "es"? setCLanguage("en"):setCLanguage("es");
+      i18n.changeLanguage(cLanguage);
+    }
     return(<>
         <header id="header" className="sticky-top"> 
           <nav className="primary-menu navbar navbar-expand-none navbar-overlay navbar-overlay-dark bg-transparent border-bottom-0 text-5 fw-600 sticky-on-top">
@@ -29,7 +35,7 @@ const Header = ()=>{
                   <span className="text-4 me-2">
                   <i className="fas fa-phone"></i>
               </span>(+58) 412 4614 009</div>
-              <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#header-nav" onClick={()=>setShowColapse(!showColapse)}>
+              <button className={`navbar-toggler collapsed ${showColapse?'show':''}`} type="button" data-bs-toggle="collapse" data-bs-target="#header-nav" onClick={()=>setShowColapse(!showColapse)}>
                   <span></span>
                   <span></span>
                   <span></span>
@@ -37,17 +43,18 @@ const Header = ()=>{
               <div id="header-nav" className={`collapse navbar-collapse ${showColapse?'show':''}`}>
                 <div className="d-flex flex-column h-100 align-items-center justify-content-center">
                   <ul className="navbar-nav">
-                      <NavBarItem name={`About Me`} hrefName={`#about`} action={closeCollapse} />  
-                      <NavBarItem name={`What I Do`} hrefName={`#services`} action={closeCollapse} /> 
-                      <NavBarItem name={`Resume`} hrefName={`#resume`} action={closeCollapse} /> 
-                      <NavBarItem name={`Portfolio`} hrefName={`#portfolio`} action={closeCollapse} /> 
-                      <NavBarItem name={`FAQ`} hrefName={`#faq`} action={closeCollapse} /> 
+                      <NavBarItem name={t(`About`)} hrefName={`#about`} action={closeCollapse} />  
+                      <NavBarItem name={t(`What`)} hrefName={`#services`} action={closeCollapse} /> 
+                      <NavBarItem name={t(`Resume`)} hrefName={`#resume`} action={closeCollapse} /> 
+                      <NavBarItem name={t(`Portfolio`)} hrefName={`#portfolio`} action={closeCollapse} /> 
+                      <NavBarItem name={t(`FAQ`)} hrefName={`#faq`} action={closeCollapse} /> 
                       {
                         /*/
                       <NavBarItem name={`Client Speak`} hrefName={`#testimonial`} action={closeCollapse} /> 
                         //*/
                       }
-                      <NavBarItem name={`Contact Me`} hrefName={`#contact`} action={closeCollapse} /> 
+                      <NavBarItem name={t(`Contact`)} hrefName={`#contact`} action={closeCollapse} /> 
+                      <NavBarItem name={t(`ChangeLanguage`)} hrefName={`#sadada`} action={changeLanguage} /> 
                   </ul>
                   <ul className="social-icons social-icons-light social-icons-lg social-icons-light d-inline-flex mt-4">
                     <SocialLink social={'whatsapp'}   hrefName="https://wa.me/584124614009"  />
