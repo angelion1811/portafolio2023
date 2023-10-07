@@ -1,0 +1,36 @@
+{
+    "ProjectInfo": "Información del Proyecto: ",
+    "ProjectDetail": "Detalles del proyecto: ",
+    "Client":"Cliente: ",
+    "Technologies": "Tecnologías: ",
+    "Industry":"Industria: ",
+    "Date":"Fecha: ",
+    "URL":"URL: ",
+
+    "project1.info": "Este proyecto es una aplicación de control de transporte y despachos de rubros. Donde realice fuero solo las funciones para un determinado tipo de usuario.",
+    "project1.client": "Lucas Byron",
+    "project1.tecnologies": "Dart, Flutter",
+    "project1.industry": "Transporte",
+    "project1.date":"Noviembre, 2022",
+
+    "project2.info": "Este proyecto es una aplicación de control y gestion de impuesto. En este proyecto realice fue la integración de par de nuevos módulos y correciones de algunos bugs.",
+    "project2.client": "Abisoft.S.A",
+    "project2.tecnologies": "React, Javascript",
+    "project2.industry": "Gobierno",
+    "project2.date":"Septiembre, 2023",
+
+    "project3.info": "Este proyecto es una aplicación de control de eventos. En este proyecto realice fue la creación de par de nuevos módulos y realizar un diseño para dispositivos móvil.",
+    "project3.client": "Abisoft.S.A",
+    "project3.tecnologies": "React, Javascript, .NET, MySql",
+    "project3.industry": "Usuario y Eventos",
+    "project3.date":"Septiembre, 2023",
+    "project3.URL":"https://agenda.finson.com/",
+    "project3.URLName":"agenda.finson.com",
+
+    "project4.info": "Este proyecto fue mi primer desarrollo móvil, que consitia en un app que supervisaba el estado de carga y descarga de unos contenedores de un buque.",
+    "project4.client": "Softico.S.A",
+    "project4.tecnologies": "React-native",
+    "project4.industry": "Naviera",
+    "project4.date":"Diciembre, 2021"
+
+}

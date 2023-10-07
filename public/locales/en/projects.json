@@ -1,0 +1,35 @@
+{
+    "ProjectInfo": "Project Info:",
+    "ProjectDetail": "Project Details:",
+    "Client":"Client:",
+    "Technologies": "Technologies",
+    "Industry":"Industry:",
+    "Date":"Date:",
+    "URL":"URL:",
+
+    "project1.info": "This project is a transportation control and item dispatch application. Where it only performs the functions for a certain type of user.",
+    "project1.client": "Lucas Byron",
+    "project1.technologies": "Dart, Flutter",
+    "project1.industry": "Transportation",
+    "project1.date":"November, 2022",
+   
+    "project2.info": "This project is a tax control and management application. In this project I carried out the integration of a couple of new modules and corrections of some bugs.",
+    "project2.client": "Abisoft.S.A",
+    "project2.technologies": "React, Javascript",
+    "project2.industry": "Government",
+    "project2.date":"September, 2023",
+
+    "project3.info": "This project is an event control application. In this project I created a couple of new modules and made a design for mobile devices.",
+    "project3.client": "Abisoft.S.A",
+    "project3.technologies": "React, Javascript, .NET, MySql",
+    "project3.industry": "User and Events",
+    "project3.date":"September, 2023",
+    "project3.URL":"https://agenda.finson.com/",
+    "project3.URLName":"agenda.finson.com",
+
+    "project4.info": "This project was my first mobile development, which consisted of an app that monitored the loading and unloading status of containers on a ship.",
+    "project4.client": "Softico.S.A",
+    "project4.technologies": "React-native",
+    "project4.industry": "Shipping company",
+    "project4.date":"December, 2021"
+}

@@ -2,7 +2,9 @@ import { useEffect, useState, useRef } from "react"
 import CustomImage from "../assets/images/project-2.jpg"
 import { useTranslation } from "react-i18next";
 import ProjectDetailModal from "./ProjectDetailModal";
-const PortfolioCard =  ({type, index, active}) => {
+import useProjects from "../hooks/useProject";
+import { data } from "jquery";
+const PortfolioCard =  ({title, image, type, index, active, setModal}) => {
 
   const [customStyle, setCustomStyle] = useState({});
   const [customClass, setCustomClass] = useState('fadeInUp');
@@ -38,19 +40,22 @@ const PortfolioCard =  ({type, index, active}) => {
     openAnimation()
   }, [])
 
+  
   return (<>
     <div 
       className={`col-sm-6 col-lg-4 wow  ${customClass} animated `}  
       data-wow-delay={`0.3s`} 
       style={{...styledObject(), ...customStyle}}
     >
-      <div className="portfolio-box">
-        <div className="portfolio-img"> <img className="img-fluid d-block" src={CustomImage} alt=""/>
-          <div className="portfolio-overlay"> <a className="popup-ajax stretched-link" href="ajax/portfolio-ajax-project-1.html"></a>
+      <div className="portfolio-box" onClick={()=>setModal()}>
+        <div className="portfolio-img"> 
+          <img className="img-fluid d-block" src={image??CustomImage} style={{width:"100%", height:"100%", maxHeight: "400px"}} alt=""/>
+          <div className="portfolio-overlay">
             <div className="portfolio-overlay-details">
               <p className="text-primary text-8"><i className="fas fa-file-alt"></i></p>
-              <h5 className="text-white text-5">Detailed Project 1</h5>
-              <span className="text-light">Category</span> </div>
+              <h5 className="text-white text-5">{title}</h5>
+              <span className="text-light">{type}</span> 
+            </div>
           </div>
         </div>
       </div>
@@ -77,34 +82,16 @@ const CustomTab = ({title, action, type, activeCardType}) =>{
 
 const SectionPortafolio = () => {
     const {t} = useTranslation("Section5Portfolio")
-    const cards = [
-      { id: 0, type: [`laravel`]},
-      { id: 1, type: [`vue` ]},
-      { id: 2, type: [`react` ]},
-      { id: 3, type: [`react-native`]},
-      { id: 4, type: [`flutter`]},
-      { id: 5, type: [`others`]},
-    ];
+    const {projects} = useProjects();
+    const [modalData, setModalData] = useState();
+    const [activeModal, setActiveModal] = useState(false);
     const [activeCardType, setActiveCardType] = useState('all')
-    const [activeCard, setActiveCard] = useState(cards);
-
-    const filterCards = () => {
-      let filtered = (cards.filter((e)=>{
-        let r  = e.type.includes(activeCardType);
-        return r;
-
-      }));
-
-      console.log(filtered);
-
-      setActiveCard(filtered)
+    const setModal = (e) => {
+      setModalData(e.data);
+      setActiveModal(!activeModal)
     }
-    useEffect(()=>{
-      if(activeCardType=="all")
-        setActiveCard(cards)
-      else
-        filterCards()
-    }, [activeCardType])
+  
+    useEffect(()=>{}, [activeCardType])
 
     
 
@@ -131,11 +118,15 @@ const SectionPortafolio = () => {
           >
             {
               //*/
-              cards.map((e, i)=><PortfolioCard 
+              projects.map((e, i)=><PortfolioCard 
                 key={i} 
                 index={i} 
+                title={e?.data?.title?t(e.data.title):'sin titulo'}
+                category={e.type.join(",   ")}
                 type={e.type} 
+                image={e?.data?.images[0]}
                 active={activeCardType=="all"||e.type.includes(activeCardType)} 
+                setModal={()=>setModal(e)}
               />)
               //*/
             }
@@ -144,7 +135,7 @@ const SectionPortafolio = () => {
         </div>
       </div>
     </section>
-    <ProjectDetailModal/>
+    <ProjectDetailModal modalData={modalData} active={activeModal} setActive={()=>setActiveModal(!activeModal)}/>
     </>)
 }
 export default SectionPortafolio;
