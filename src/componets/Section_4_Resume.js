@@ -104,28 +104,10 @@ const SectionResume = () =>{
             </h2>
             <div className="border-start border-2 border-primary ps-3">
               <DescriptionRow 
-                title={t("E_title_1")}
-                subTitle={t("E_subtitle_1")}
-                paragraph={t(`E_paragraph_1`)}
-              />
-              <hr className="my-4"/>
-              <DescriptionRow 
-                title={t("E_title_2")}
-                subTitle={t("E_subtitle_2")}
-                paragraph={t(`E_paragraph_2`)} 
-               />
-              <hr className="my-4"/>
-              <DescriptionRow 
-                title={t("E_title_3")}
-                subTitle={t("E_subtitle_3")}
-                paragraph={t(`E_paragraph_3`)} 
-               />
-              <hr className="my-4"/>
-              <DescriptionRow 
-                title={t("E_title_4")}
-                subTitle={t("E_subtitle_4")}
-                paragraph={t(`E_paragraph_4`)} 
-              />
+                title={t("E_title_6")}
+                subTitle={t("E_subtitle_6")}
+                paragraph={t(`E_paragraph_6`)} 
+              /> 
               <hr className="my-4"/>
               <DescriptionRow 
                 title={t("E_title_5")}
@@ -134,9 +116,27 @@ const SectionResume = () =>{
               />
               <hr className="my-4"/>
               <DescriptionRow 
-                title={t("E_title_6")}
-                subTitle={t("E_subtitle_6")}
-                paragraph={t(`E_paragraph_6`)} 
+                title={t("E_title_4")}
+                subTitle={t("E_subtitle_4")}
+                paragraph={t(`E_paragraph_4`)} 
+              />
+              <hr className="my-4"/>
+              <DescriptionRow 
+                title={t("E_title_3")}
+                subTitle={t("E_subtitle_3")}
+                paragraph={t(`E_paragraph_3`)} 
+               />
+              <hr className="my-4"/>
+              <DescriptionRow 
+                title={t("E_title_2")}
+                subTitle={t("E_subtitle_2")}
+                paragraph={t(`E_paragraph_2`)} 
+               />
+              <hr className="my-4"/>
+              <DescriptionRow 
+                title={t("E_title_1")}
+                subTitle={t("E_subtitle_1")}
+                paragraph={t(`E_paragraph_1`)}
               />
              
             </div>
