@@ -54,7 +54,7 @@ const Header = ()=>{
                         //*/
                       }
                       <NavBarItem name={t(`Contact`)} hrefName={`#contact`} action={closeCollapse} /> 
-                      <NavBarItem name={t(`ChangeLanguage`)} hrefName={`#sadada`} action={changeLanguage} /> 
+                      <NavBarItem name={t(`ChangeLanguage`)} hrefName={`#`} action={changeLanguage} /> 
                   </ul>
                   <ul className="social-icons social-icons-light social-icons-lg social-icons-light d-inline-flex mt-4">
                     <SocialLink social={'whatsapp'}   hrefName="https://wa.me/584124614009"  />

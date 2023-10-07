@@ -1,4 +1,14 @@
 {
     "Faq":"FAQ",
-    "AnyQuestion": "Have any questions?"
+    "AnyQuestion": "Have any questions?",
+    "Question1": "What Programming Languages ​​Do You Master",
+    "Answer1_1": "Currently he has mastered two programming languages ​​very well: Php and Javascript.",
+    "Answer1_2": "But apart from them he also worked in other languages ​​such as: Python, Dart and C#.",
+    "Question2": "What frameworks have you worked with at the web level?",
+    "Answer2_1": "Until now he has worked on various web frameworks both on the front-end and back-end.",
+    "Answer2_2": "For the frontend worked with: Angular, Vuejs, Laravel (their blade template engine), Reactjs",
+    "Answer2_3": "For the backend worked with: Laravel, node with express, .net",
+    "Question3": "Do you have mobile work?",
+    "Answer3_1": "yes, he worked on hybrid mobile applications using frameworks like React-native or flutter.",
+    "Answer3_2": "I also had a little experience with Ionic once."
 }
