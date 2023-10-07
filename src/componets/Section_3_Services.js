@@ -31,7 +31,7 @@ const SectionServices = () => {
   },[])
 
     return(<>
-      <section id="services" className="section bg-light" onMouseEnter={()=>startAnimation(0)}>
+      <section id="services" className="section bg-light" onMouseEnter={()=>startAnimation(0)} onFocusCapture={()=>startAnimation(0)} onFocus={()=>startAnimation(0)}>
       <div className="container"> 
         <p className={`text-center mb-2 wow fadeInUp ${animatedClass[0]}`} style={styledObject(0)}>
           <span className="bg-primary text-dark px-2">{t(`WhatIDo`)}</span>
@@ -43,7 +43,7 @@ const SectionServices = () => {
           {t(`HowICanHelp`)}
         </h2>
         
-        <div className="row gy-5 mt-5" onMouseEnter={()=>startAnimation(1)}>
+        <div className="row gy-5 mt-5" onMouseEnter={()=>startAnimation(1)} onFocusCapture={()=>startAnimation(1)} onFocus={()=>startAnimation(1)}>
           <CustomColumn title={t(`title1`)} paragraph={t(`paragraph1`)} iconClass={`fas fa-desktop`} animatedClass={animatedClass[1]} styledObject={styledObject(1)}/>
           <CustomColumn title={t(`title2`)} paragraph={t(`paragraph2`)} iconClass={`fas fa-pencil-ruler`} animatedClass={animatedClass[1]} styledObject={styledObject(1)}/>
           <CustomColumn title={t(`title3`)} paragraph={t(`paragraph3`)} iconClass={`fa fa-mobile`} animatedClass={animatedClass[1]} styledObject={styledObject(1)}/>

@@ -19,7 +19,7 @@ const SectionAbout = () => {
     initialChange(3);
   },[])
 return(<>
-    <section id="about" className="section" onMouseEnter={()=>startAnimation(0)}>
+    <section id="about" className="section" onMouseEnter={()=>startAnimation(0)} onFocusCapture={()=>startAnimation(0)} onFocus={()=>startAnimation(0)}>
       <div className="container"> 
         <p className={`text-center mb-2 wow fadeInUp ${animatedClass[0]}`} style={{"visibility": started[0]?"visible":"hidden", "animationName": started[0]? undefined:"none"}}>
           <span className="bg-primary text-dark px-2">{t("AboutMe")}</span>
@@ -31,7 +31,7 @@ return(<>
           {t("KnowMeMore")}
         </h2>
         
-        <div className="row" onMouseEnter={()=>startAnimation(1)}>
+        <div className="row" onMouseEnter={()=>startAnimation(1)} onFocusCapture={()=>startAnimation(1)} onFocus={()=>startAnimation(1)}>
           <div className={`col-lg-8 text-center text-lg-start wow fadeInUp ${animatedClass[1]}`} style={{"visibility": started[1]?"visible":"hidden", "animationName": started[1]? undefined:"none"}}>
             <h2 className="text-8 fw-400 mb-3">{t(`Hi`)}<span className="fw-700 border-bottom border-3 border-primary m-2">Angel León</span>
             </h2>
@@ -60,7 +60,7 @@ return(<>
             </div>
           </div>
         </div>
-        <div className="row gy-3 mt-4" onMouseEnter={()=>startAnimation(2)}>
+        <div className="row gy-3 mt-4" onMouseEnter={()=>startAnimation(2)} onFocusCapture={()=>startAnimation(2)} onFocus={()=>startAnimation(2)}>
           <InfoColumn title={t(`Name`)} info={`Angel León`} animatedClass={animatedClass[2]} started={started[2]} />
           <InfoColumn title={t(`Email`)} animatedClass={animatedClass[2]} started={started[2]}>
             <p className="text-4 fw-600 mb-0">
