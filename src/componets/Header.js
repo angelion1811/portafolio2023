@@ -34,7 +34,7 @@ const Header = ()=>{
               <div className="text-3 ms-auto me-2">
                   <span className="text-4 me-2">
                   <i className="fas fa-phone"></i>
-              </span>(+58) 412 4614 009</div>
+              </span>(+58) 412 461 40 09</div>
               <button className={`navbar-toggler collapsed ${showColapse?'show':''}`} type="button" data-bs-toggle="collapse" data-bs-target="#header-nav" onClick={()=>setShowColapse(!showColapse)}>
                   <span></span>
                   <span></span>

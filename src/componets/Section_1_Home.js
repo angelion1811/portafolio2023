@@ -19,7 +19,9 @@ const SectionHome  = () => {
     }
 
     const customStartAnimation = async () => {
-        initialChange(1) 
+        initialChange(1);
+        await setTimeout(()=>{}, 1000);
+        startAnimation(0);
     }
 
       useEffect(() => {
@@ -41,7 +43,7 @@ const SectionHome  = () => {
     }, []);
        
     return(<>
-        <section id="home" className="bg-primary d-flex fullscreen position-relative py-5" onMouseEnter={()=>startAnimation(0)} >
+        <section id="home" className="bg-primary d-flex fullscreen position-relative py-5">
         <div className="container my-auto py-4">
             <div className="row">
             <div className={`col-lg-7 text-center text-lg-start align-self-center order-1 order-lg-0 wow fadeIn ${animatedClass[0]}`} style={styledObject(0)}>

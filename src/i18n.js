@@ -3,7 +3,7 @@ import detector from "i18next-browser-languagedetector";
 import backend from "i18next-http-backend";
 import { initReactI18next } from "react-i18next";
 const fallbackLng = ['en', 'es']
-const production = false;
+const production = true;
 
 const options = production?{
   fallbackLng,// use en if detected lng is not available

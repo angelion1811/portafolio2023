@@ -67,7 +67,7 @@ const SectionContact = () => {
               Carabobo, Venezuela.
             </address>
             <h3 class="text-5 fw-600">{t("Call")}:</h3>
-            <p class="text-4">(+58) 412 461 4009</p>
+            <p class="text-4">(+58) 412 461 40 09</p>
             <ul class="social-icons social-icons-lg justify-content-center justify-content-lg-start mt-5">
               <li class="social-icons-twitter">
                 <a data-bs-toggle="tooltip" href="https://twitter.com/harnishdesign/" target="_blank" title="" data-bs-original-title="Twitter">

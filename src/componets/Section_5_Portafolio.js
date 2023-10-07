@@ -104,8 +104,10 @@ const SectionPortafolio = () => {
         
         <ul className="portfolio-menu nav nav-tabs fw-600 justify-content-start justify-content-md-center border-bottom-0 mb-4 wow fadeInUp" style={{"visibility": "visible"}}>
           <CustomTab title={t("all")}          action={()=>setActiveCardType("all")}          type={"all"}          activeCardType={activeCardType} />
+         {/*/}
           <CustomTab title={"Laravel"}      action={()=>setActiveCardType("laravel")}      type={"laravel"}      activeCardType={activeCardType} />
           <CustomTab title={"Vue"}          action={()=>setActiveCardType("vue")}          type={"vue"}          activeCardType={activeCardType} />
+          {//*/}
           <CustomTab title={"React"}        action={()=>setActiveCardType("react")}        type={"react"}        activeCardType={activeCardType} />
           <CustomTab title={"React-native"} action={()=>setActiveCardType("react-native")} type={"react-native"} activeCardType={activeCardType} />
           <CustomTab title={"Flutter"}      action={()=>setActiveCardType("flutter")}      type={"flutter"}      activeCardType={activeCardType} />
