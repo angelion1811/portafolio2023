@@ -15,7 +15,7 @@ const DescriptionRow =  ({title, subTitle, paragraph}) => {
 const PercentBar = ({title, percent}) => {
   return(<>
     <p className="fw-500 text-start mb-2 flex justify-between">
-      <span class="float-right">{`${percent}%`}</span>
+      <span class="float-right">{``}</span>
       <span class="float-end">{`${title}`}</span>
     </p>
     <div className="progress progress-sm mb-4">
@@ -147,17 +147,17 @@ const SectionResume = () =>{
         </h2>
         <div className="row gx-5" onMouseEnter={()=>startAnimation(2)}>
           <div className={`col-md-6 wow fadeInUp ${animatedClass[2]}`} style={styledObject(2)}>
-            <PercentBar title={`HTML/CSS`} percent={95} />
-            <PercentBar title={`Javascript`} percent={80} />
-            <PercentBar title={`PHP`} percent={80} />
-            <PercentBar title={`C#`} percent={20} />
-            <PercentBar title={`React-Native`} percent={80} />
+            <PercentBar title={`HTML/CSS`} percent={85} />
+            <PercentBar title={`Javascript`} percent={70} />
+            <PercentBar title={`PHP`} percent={70} />
+            <PercentBar title={`C#`} percent={15} />
+            <PercentBar title={`React-Native`} percent={70} />
           </div>
           <div className={`col-md-6 wow fadeInUp ${animatedClass[2]}`} data-wow-delay="0.2s" style={{...styledObject(2), "animation-delay": "0.2s"}}>
-            <PercentBar title={`Laravel`} percent={80} />
-            <PercentBar title={`Angular`} percent={80} />
+            <PercentBar title={`Laravel`} percent={70} />
+            <PercentBar title={`Angular`} percent={70} />
             <PercentBar title={`Vuejs`} percent={85} />
-            <PercentBar title={`React`} percent={80} />
+            <PercentBar title={`React`} percent={70} />
             <PercentBar title={`Flutter`} percent={70} />
           </div>
         </div>
