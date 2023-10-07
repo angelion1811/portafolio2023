@@ -18,14 +18,7 @@ const SectionHome  = () => {
         }
     }
 
-    const customStartAnimation = async () => {
-        initialChange(1);
-        await setTimeout(()=>{}, 1000);
-        startAnimation(0);
-    }
-
-      useEffect(() => {
-        customStartAnimation()
+    const setSettingAnimation = ()=>{
         const dataArray = [t("devFullWeb"), "" ,t("devMobile"), ""];
         const typed = new Typed(el.current, {
             strings: dataArray, // Strings to display
@@ -36,11 +29,27 @@ const SectionHome  = () => {
             backDelay: 300,
             loop: true,
             loopCount: Infinity
-          });
+            });
           return () => {
             typed.destroy();
-          };
+          }
+    }
+
+    const customStartAnimation = async () => {
+        initialChange(1);
+        await setSettingAnimation(); 
+        await setTimeout(()=>{}, 1000);
+        
+    }
+
+      useEffect(() => {
+        customStartAnimation();
     }, []);
+
+    useEffect(()=>{
+        if(animatedClass?.length)
+            setTimeout(()=>startAnimation(0), 2000)
+    },[animatedClass])
        
     return(<>
         <section id="home" className="bg-primary d-flex fullscreen position-relative py-5">
