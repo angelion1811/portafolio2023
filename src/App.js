@@ -13,15 +13,16 @@ import SectionHireMe from './componets/Section_6_HireMe';
 import SectionFaq from './componets/Section_7_Faq';
 import SectionTestimonial from './componets/Section_8_Testimonial';
 import SectionContact from './componets/Section_9_Contact';
+import SectionHomeCopy from './componets/Section_1_Home_copy';
 
 function App() {
   return (
     <>
-    <Preloader/>
+   
     <div id="main-wrapper"> 
       <Header/>
       <MainContent>
-        <SectionHome/>
+        <SectionHomeCopy/>
         <SectionAbout/>
         <SectionServices/>
         <SectionResume/>

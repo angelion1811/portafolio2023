@@ -30,25 +30,39 @@ const PercentBar = ({title, percent}) => {
   </>)
 }
 const SectionResume = () =>{
-  const {t, i18n} = useTranslation("Section4Resume");  
+  const {t, i18n} = useTranslation("Section4Resume");
+  const {started, animatedClass, startAnimation, initialChange} = useStarted();
+  const styledObject = (index) => {
+      switch (index){
+        case 0: 
+        case 1: 
+        case 2: 
+        case 3: 
+          return {"visibility": started[index]?"visible":"hidden", "animationName": started[index]? undefined:"none"};
+        default: 
+          return {};
+      }
+  }
   
   const getFile = () => i18n.language == "es-US"? CV_ES:CV_EN;
 
-  useEffect(()=>{},[])
+  useEffect(()=>{
+    initialChange(4);
+  },[])
   return(<>
-    <section id="resume" className="section">
+    <section id="resume" className="section" onMouseEnter={()=>startAnimation(0)}>
       <div className="container"> 
-        <p className={`text-center mb-2 wow fadeInUp`} >
+        <p className={`text-center mb-2 wow fadeInUp ${animatedClass[0]}`} style={styledObject(0)}>
           <span className="bg-primary text-dark px-2">
             {t("Resume")}
           </span>
         </p>
-        <h2 className={`text-10 fw-600 text-center mb-5 wow fadeInUp`} >
+        <h2 className={`text-10 fw-600 text-center mb-5 wow fadeInUp ${animatedClass[0]}`} style={styledObject(0)}>
          {t("ASumary")}
         </h2>
         
-        <div className="row g-5 mt-5"> 
-          <div className={`col-lg-6 wow fadeInUp`}  >
+        <div className="row g-5 mt-5" onMouseEnter={()=>startAnimation(1)}> 
+          <div className={`col-lg-6 wow fadeInUp ${animatedClass[1]}`} style={styledObject(1)} >
             <h2 className="text-7 fw-600 mb-4 pb-2">
               {t('MyEducation')}
             </h2>
@@ -84,7 +98,7 @@ const SectionResume = () =>{
               />
             </div>
           </div>
-          <div className={`col-lg-6 wow fadeInUp`} data-wow-delay="0.2s" >
+          <div className={`col-lg-6 wow fadeInUp ${animatedClass[1]}`} data-wow-delay="0.2s" style={{...styledObject(1), "animation-delay": "0.2s"}}>
             <h2 className="text-7 fw-600 mb-4 pb-2">
               {t("MyExperience")}
             </h2>
@@ -128,18 +142,18 @@ const SectionResume = () =>{
             </div>
           </div>
         </div>
-        <h2 className={`text-7 fw-600 mb-4 pb-2 mt-5 wow fadeInUp`} >
+        <h2 className={`text-7 fw-600 mb-4 pb-2 mt-5 wow fadeInUp ${animatedClass[2]}`} style={styledObject(2)}>
           {t('MySkills')}
         </h2>
-        <div className="row gx-5">
-          <div className={`col-md-6 wow fadeInUp`} >
+        <div className="row gx-5" onMouseEnter={()=>startAnimation(2)}>
+          <div className={`col-md-6 wow fadeInUp ${animatedClass[2]}`} style={styledObject(2)}>
             <PercentBar title={`HTML/CSS`} percent={85} />
             <PercentBar title={`Javascript`} percent={70} />
             <PercentBar title={`PHP`} percent={70} />
             <PercentBar title={`C#`} percent={15} />
             <PercentBar title={`React-Native`} percent={70} />
           </div>
-          <div className={`col-md-6 wow fadeInUp`} data-wow-delay="0.2s">
+          <div className={`col-md-6 wow fadeInUp ${animatedClass[2]}`} data-wow-delay="0.2s" style={{...styledObject(2), "animation-delay": "0.2s"}}>
             <PercentBar title={`Laravel`} percent={70} />
             <PercentBar title={`Angular`} percent={70} />
             <PercentBar title={`Vuejs`} percent={85} />
@@ -147,8 +161,8 @@ const SectionResume = () =>{
             <PercentBar title={`Flutter`} percent={70} />
           </div>
         </div>
-        <div className="row" >
-          <p className={`text-center mt-5 wow fadeInUp`}  >
+        <div className="row" onMouseEnter={()=>startAnimation(3)} >
+          <p className={`text-center mt-5 wow fadeInUp ${animatedClass[3]}`} style={styledObject(3)} >
             <a href={getFile()} className="btn btn-outline-dark shadow-none rounded-0" download={`CV-${i18n.language}-Angel-Leon.pdf`}>{t(`DownloadCV`)}</a>
           </p>
         </div>
