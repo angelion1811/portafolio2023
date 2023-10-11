@@ -1,22 +1,11 @@
 import { useEffect, useRef } from "react";
 import Typed from 'typed.js';
-import useStarted from "../hooks/useStarted";
 import { useTranslation } from "react-i18next";
-import profilePicture from "../assets/images/profile1.jpeg"
+import profilePicture from "../assets/images/profile1.jpeg";
 const SectionHome  = () => {
     
     const {t} = useTranslation("Section1Home");
     const el = useRef(null);
-    const {started, animatedClass, startAnimation, initialChange} = useStarted();
-
-    const styledObject = (index) => {
-        switch (index){
-          case 0: 
-            return {"visibility": started[index]?"visible":"hidden", "animationName": started[index]? undefined:"none"};
-          default: 
-            return {};
-        }
-    }
 
     const setSettingAnimation = ()=>{
         const dataArray = [t("devFullWeb"), "" ,t("devMobile"), ""];
@@ -35,27 +24,17 @@ const SectionHome  = () => {
           }
     }
 
-    const customStartAnimation = async () => {
-        initialChange(1);
-        await setSettingAnimation(); 
-        await setTimeout(()=>{}, 1000);
-        
-    }
-
-      useEffect(() => {
-        customStartAnimation();
+    useEffect(() => {
+        setSettingAnimation();
     }, []);
 
-    useEffect(()=>{
-        if(animatedClass?.length)
-            setTimeout(()=>startAnimation(0), 2000)
-    },[animatedClass])
+  
        
     return(<>
         <section id="home" className="bg-primary d-flex fullscreen position-relative py-5">
         <div className="container my-auto py-4">
             <div className="row">
-            <div className={`col-lg-7 text-center text-lg-start align-self-center order-1 order-lg-0 wow fadeIn ${animatedClass[0]}`} style={styledObject(0)}>
+            <div className={`col-lg-7 text-center text-lg-start align-self-center order-1 order-lg-0 wow fadeIn`}>
                 <h1 className="text-12 fw-300 mb-0 text-uppercase">
                    {t("hi")}
                 </h1>
@@ -71,7 +50,7 @@ const SectionHome  = () => {
                 </a>
             </div>
             <div className="col-lg-5 text-center align-self-center mb-4 mb-lg-0 order-0 order-lg-1">
-                <div className={`bg-light rounded-pill d-inline-block p-3 shadow-lg wow zoomIn ${animatedClass}`} style={styledObject(0)}> 
+                <div className={`bg-light rounded-pill d-inline-block p-3 shadow-lg wow zoomIn`}> 
                 <img className="img-fluid rounded-pill d-block" src={profilePicture} title={t(`hi`)} alt=""/>
             </div>
             </div>

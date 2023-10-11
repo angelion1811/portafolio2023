@@ -34,7 +34,9 @@ const SectionResume = () =>{
   
   const getFile = () => i18n.language == "es-US"? CV_ES:CV_EN;
 
-  useEffect(()=>{},[])
+  useEffect(()=>{
+   
+  },[])
   return(<>
     <section id="resume" className="section">
       <div className="container"> 

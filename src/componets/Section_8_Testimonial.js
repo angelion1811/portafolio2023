@@ -1,23 +1,6 @@
-import { useEffect } from "react";
-import useStarted from "../hooks/useStarted";
+
 
 const SectionTestimonial = () => {
-  
-  const {started, animatedClass, startAnimation, initialChange} = useStarted();
-  const styledObject = (index) => {
-      switch (index){
-        case 0: 
-        case 1: 
-        case 2: 
-          return {"visibility": started[index]?"visible":"hidden", "animationName": started[index]? undefined:"none"};
-        default: 
-          return {};
-      }
-  }
-  useEffect(()=>{
-    initialChange(2);
-  },[])
-
   
     return(<>
         <section id="testimonial" class="section bg-secondary">

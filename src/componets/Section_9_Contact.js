@@ -1,10 +1,8 @@
 
 import { useEffect, useState, useRef } from "react";
-import useStarted from "../hooks/useStarted";
 import { useTranslation } from "react-i18next";
 const SectionContact = () => {
   const {t} = useTranslation("Section9ContactMe");
-  const {started, animatedClass, startAnimation, initialChange} = useStarted();
   const nameRef = useRef(null);
   const emailRef = useRef(null);
   const helpRef = useRef(null);
@@ -14,7 +12,7 @@ const SectionContact = () => {
   const [help, setHelp] = useState('');
   const [message, setMessage] = useState('');
 
-  const  phoneNumber = "584124614009";
+  const  phoneNumber = "(+58) 412 461 40 09";
 
   const prepareMessage = () => {
     const invalidValues =  [ undefined, null, ''];
@@ -39,26 +37,17 @@ const SectionContact = () => {
     window.open(url);
   }
 
-  const styledObject = (index) => {
-      switch (index){
-        case 0: 
-          return {"visibility": started[index]?"visible":"hidden", "animationName": started[index]? undefined:"none"};
-        default: 
-          return {};
-      }
-  }
+
   useEffect(()=>{
     if(message)
       sendMessage();
   },[message]);
-  useEffect(()=>{
-    initialChange(2);
-  },[])
+ 
     return (<>
-    <section id="contact" class="section bg-primary" onMouseEnter={()=>startAnimation(0)}>
+    <section id="contact" class="section bg-primary">
       <div class="container">
         <div class="row">
-          <div class={`col-lg-5 text-center text-lg-start wow fadeInUp ${animatedClass[0]}`} style={styledObject(0)}>
+          <div class={`col-lg-5 text-center text-lg-start wow fadeInUp `}>
             <h2 class="text-10 fw-600 mb-5">{t('lets')}</h2>
             <p class="text-5 mb-5">{t('paragraph1')}</p>
             <h3 class="text-5 fw-600">{t("Living")}</h3>
@@ -96,7 +85,7 @@ const SectionContact = () => {
               </li>
             </ul>
           </div>"
-          <div class={`col-lg-6 ms-auto mt-5 mt-lg-0 wow fadeInUp ${animatedClass[0]}`} data-wow-delay="0.3s" style={{ ...styledObject(0), "animation-delay": "0.3s"}}>
+          <div class={`col-lg-6 ms-auto mt-5 mt-lg-0 wow fadeInUp`} data-wow-delay="0.3s">
             <h2 class="text-10 fw-600 text-center text-lg-start mb-5">{t("Estimate")}</h2>
             {/*<!-- Contact Form -->*/}
             <form id="contact-form" class="form-border" action="php/mail.php" method="post">
