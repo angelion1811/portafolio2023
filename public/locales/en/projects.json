@@ -1,9 +1,9 @@
 {
-    "ProjectInfo": "Project Info:",
-    "ProjectDetail": "Project Details:",
-    "Client":"Client:",
-    "Technologies": "Technologies",
-    "Industry":"Industry:",
+    "ProjectInfo": "Project Info: ",
+    "ProjectDetail": "Project Details: ",
+    "Client":"Client: ",
+    "Technologies": "Technologies: ",
+    "Industry":"Industry: ",
     "Date":"Date:",
     "URL":"URL:",
 
