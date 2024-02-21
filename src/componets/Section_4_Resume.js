@@ -14,19 +14,28 @@ const DescriptionRow =  ({title, subTitle, paragraph}) => {
 
 const PercentBar = ({title, percent}) => {
   return(<>
-    <p className="fw-500 text-start mb-2 flex justify-between">
-      <span class="float-right">{``}</span>
-      <span class="float-end">{`${title}`}</span>
-    </p>
-    <div className="progress progress-sm mb-4">
-      <div 
-        className="progress-bar" 
-        role="progressbar" style={{"width": `${percent}%`}} 
-        aria-valuenow={`${percent}`} 
-        aria-valuemin="0" 
-        aria-valuemax="100"
-      />
+    <div className="row">
+      <div className="col-12">
+        <p className="fw-500 text-start mb-2">
+          <span class="float-end">{`${title}`}</span>
+        </p>
+      </div>
+      <div className="col-12">
+        <center>
+          <div className="progress progress-sm ">
+            <div 
+              className="progress-bar" 
+              role="progressbar" style={{"width": `${percent}%`}} 
+              aria-valuenow={`${percent}`} 
+              aria-valuemin="0" 
+              aria-valuemax="100"
+            />
+          </div>
+        </center>          
+      </div>
     </div>
+    
+    
   </>)
 }
 const SectionResume = () =>{
