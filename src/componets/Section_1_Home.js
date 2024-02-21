@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import Typed from 'typed.js';
 import { useTranslation } from "react-i18next";
-import profilePicture from "../assets/images/profile1.jpeg";
+import profilePicture from "../assets/images/profile1.png";
 const SectionHome  = () => {
     
     const {t} = useTranslation("Section1Home");
