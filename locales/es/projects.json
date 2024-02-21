@@ -31,6 +31,12 @@
     "project4.client": "Softico.S.A",
     "project4.tecnologies": "React-native",
     "project4.industry": "Naviera",
-    "project4.date":"Diciembre, 2021"
+    "project4.date":"Diciembre, 2021",
+
+    "project5.info": "Este proyecto fue un desarrollo de una webapp, que consitia en un app movil que supervisaba el estado del viaje y ruta de una carga.",
+    "project5.client": "PHOINIKE LOGISTICS, C.A.",
+    "project5.tecnologies": "Flutter, Vuejs, PHP",
+    "project5.industry": "Naviera",
+    "project5.date":"Diciembre, 2023"
 
 }
