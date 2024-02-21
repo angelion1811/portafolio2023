@@ -4,8 +4,8 @@
     "Client":"Client: ",
     "Technologies": "Technologies: ",
     "Industry":"Industry: ",
-    "Date":"Date:",
-    "URL":"URL:",
+    "Date":"Date: ",
+    "URL":"URL: ",
 
     "project1.info": "This project is a transportation control and item dispatch application. Where it only performs the functions for a certain type of user.",
     "project1.client": "Lucas Byron",
