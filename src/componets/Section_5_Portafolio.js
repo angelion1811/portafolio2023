@@ -3,7 +3,6 @@ import CustomImage from "../assets/images/project-2.jpg"
 import { useTranslation } from "react-i18next";
 import ProjectDetailModal from "./ProjectDetailModal";
 import useProjects from "../hooks/useProject";
-import { data } from "jquery";
 const PortfolioCard =  ({title, image, type, index, active, setModal}) => {
 
   const [customStyle, setCustomStyle] = useState({});
@@ -106,8 +105,8 @@ const SectionPortafolio = () => {
           <CustomTab title={t("all")}          action={()=>setActiveCardType("all")}          type={"all"}          activeCardType={activeCardType} />
          {/*/}
           <CustomTab title={"Laravel"}      action={()=>setActiveCardType("laravel")}      type={"laravel"}      activeCardType={activeCardType} />
-          <CustomTab title={"Vue"}          action={()=>setActiveCardType("vue")}          type={"vue"}          activeCardType={activeCardType} />
           {//*/}
+          <CustomTab title={"Vue"}          action={()=>setActiveCardType("vue")}          type={"vue"}          activeCardType={activeCardType} />
           <CustomTab title={"React"}        action={()=>setActiveCardType("react")}        type={"react"}        activeCardType={activeCardType} />
           <CustomTab title={"React-native"} action={()=>setActiveCardType("react-native")} type={"react-native"} activeCardType={activeCardType} />
           <CustomTab title={"Flutter"}      action={()=>setActiveCardType("flutter")}      type={"flutter"}      activeCardType={activeCardType} />
